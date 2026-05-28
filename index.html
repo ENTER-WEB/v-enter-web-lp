@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- lp_v14: 自社サイト紹介セクション削除 / mailto body統一 / chip class欠番解消 / sub 3段分割 / 2026-05-28 -->
+<!-- lp_v15: 背景色再設計(クリーム統一/Stanceクリーム/Safety暗系/Honesty和紙色) / 2026-05-28 -->
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -335,7 +336,7 @@
   }
 
   /* ===== 5. Stance (v10: h2 + 補足1行・annotなし・明朝なし) ===== */
-  .stance{padding:140px 0 160px;background:var(--paper);}
+  .stance{padding:140px 0 160px;background:var(--soft);}
   .stance .eyeb{font-size:11px;color:var(--orange);letter-spacing:.32em;font-weight:800;text-transform:uppercase;margin-bottom:48px;display:inline-flex;align-items:center;gap:14px;}
   .stance .eyeb::before{content:"";width:48px;height:1.5px;background:var(--orange);}
   .stance .punch{font-weight:900;font-size:clamp(20px,2.6vw,36px);line-height:1.6;letter-spacing:-.015em;color:var(--ink);margin:0;position:relative;isolation:isolate;text-wrap:pretty;}
@@ -431,7 +432,7 @@
   @media(max-width:760px){.price-card{padding:32px 24px;border-radius:20px;}.price-row{grid-template-columns:1fr;gap:10px;}.price-row .pval{text-align:left;}.price-examples{padding:28px 22px;}.ex-row{grid-template-columns:1fr 1fr;gap:8px 14px;padding:14px 18px;font-size:13px;}.ex-row.ex-head{display:none;}.ex-row span:nth-child(1){grid-column:1/-1;font-weight:800;color:var(--ink);}.ex-row .ex-total{text-align:left;}}
 
   /* ===== 8. Team: nexus風 メンバー紹介スライダー(3枚見せ・中央フォーカス) ===== */
-  .team{padding:128px 0;background:var(--bg);overflow:hidden;}
+  .team{padding:128px 0;background:var(--soft);overflow:hidden;}
   .team .head-en{position:relative;margin-bottom:48px;padding-left:8px;}
   .team .head-en .eyeb{font-size:13px;color:var(--orange);font-weight:700;letter-spacing:.06em;margin-bottom:6px;}
   .team .head-en h2{font-weight:900;font-size:clamp(40px,5.6vw,72px);letter-spacing:-.02em;line-height:1.15;color:var(--ink);}
@@ -552,22 +553,27 @@
   }
 
   /* ===== Safety: 横罫線リスト(角丸ボックス廃止) ===== */
-  .safety{padding:128px 0;background:var(--soft);}
-  .safety .head-block{max-width:42em;margin:0 auto 64px;text-align:center;}
-  .safety-board{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--ink);}
-  .safety .item{padding:34px 32px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;position:relative;border-bottom:1px solid var(--line);border-right:1px solid var(--line);background:transparent;transition:background .3s;}
+  /* lp_v15: Safety 暗系 (信頼感の重み) */
+  .safety{padding:128px 0;background:linear-gradient(180deg,#1A1410 0%,#0E0E0E 100%);color:var(--paper);position:relative;}
+  .safety::before{content:"";position:absolute;right:8%;top:-100px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(232,93,47,.16) 0%,transparent 70%);pointer-events:none;}
+  .safety .head-block{max-width:42em;margin:0 auto 64px;text-align:center;position:relative;z-index:1;}
+  .safety .head-block h2{color:var(--paper);}
+  .safety .head-block .h-eye{color:#FF8A5E;}
+  .safety .head-block .lead{color:rgba(255,255,255,.78);}
+  .safety-board{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid rgba(255,255,255,.18);position:relative;z-index:1;}
+  .safety .item{padding:34px 32px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;position:relative;border-bottom:1px solid rgba(255,255,255,.12);border-right:1px solid rgba(255,255,255,.12);background:transparent;transition:background .3s;}
   .safety .item:nth-child(2n){border-right:none;}
-  .safety .item:hover{background:rgba(255,255,255,.5);}
+  .safety .item:hover{background:rgba(255,255,255,.04);}
   .safety .item .mark{position:relative;width:44px;height:44px;flex:none;}
   .safety .item .mark .q,.safety .item .mark .a{position:absolute;inset:0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;transition:opacity .5s cubic-bezier(.34,1.56,.64,1),transform .5s cubic-bezier(.34,1.56,.64,1);}
-  .safety .item .mark .q{background:#EFEAE0;color:#8A7F73;opacity:1;transform:scale(1) rotate(0deg);}
-  .safety .item .mark .a{background:var(--orange);color:var(--paper);opacity:0;transform:scale(.4) rotate(-30deg);}
+  .safety .item .mark .q{background:rgba(255,255,255,.10);color:rgba(255,255,255,.45);opacity:1;transform:scale(1) rotate(0deg);}
+  .safety .item .mark .a{background:var(--orange);color:var(--paper);opacity:0;transform:scale(.4) rotate(-30deg);box-shadow:0 6px 18px rgba(232,93,47,.4);}
   .safety .item .mark .a svg{width:22px;height:22px;}
   .safety .item.is-in .mark .q{opacity:0;transform:scale(.4) rotate(30deg);}
   .safety .item.is-in .mark .a{opacity:1;transform:scale(1) rotate(0deg);}
-  .safety .item h4{font-weight:800;font-size:18px;line-height:1.45;letter-spacing:-.005em;margin-bottom:8px;color:#8A7F73;transition:color .5s;}
-  .safety .item.is-in h4{color:var(--ink);}
-  .safety .item p{font-size:13.5px;color:var(--sub);line-height:1.95;}
+  .safety .item h4{font-weight:800;font-size:18px;line-height:1.45;letter-spacing:-.005em;margin-bottom:8px;color:rgba(255,255,255,.5);transition:color .5s;}
+  .safety .item.is-in h4{color:var(--paper);}
+  .safety .item p{font-size:13.5px;color:rgba(255,255,255,.78);line-height:1.95;}
   .safety .item:nth-child(1){transition-delay:0s;}
   .safety .item:nth-child(2){transition-delay:.12s;}
   .safety .item:nth-child(3){transition-delay:.24s;}
@@ -615,7 +621,7 @@
   /* vaizo-quote CSS削除済 (v8: stanceセクション撤去に伴い) */
 
   /* ===== Honesty: 縦書きの手紙(便箋)風 ===== */
-  .honesty{padding:128px 0;background:linear-gradient(180deg,var(--bg) 0%,#F2EBDE 100%);position:relative;overflow:hidden;}
+  .honesty{padding:128px 0;background:#F2EBDA;position:relative;overflow:hidden;}
   .honesty::before{content:"";position:absolute;left:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(232,93,47,.10) 0%,transparent 70%);}
   .honesty::after{content:"";position:absolute;right:-100px;bottom:-100px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(255,225,69,.14) 0%,transparent 70%);}
   .honesty .head-row{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:48px;margin-bottom:48px;}
