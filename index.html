@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- lp_v14: 自社サイト紹介セクション削除 / mailto body統一 / chip class欠番解消 / sub 3段分割 / 2026-05-28 -->
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -205,8 +206,8 @@
   /* チップ位置: 4チップを時計回りに均等配置 (stamp右上を避ける) */
   .hero-art .chip.p1{top:14%;left:-14%;transform:rotate(-3deg);}    /* 左上 */
   .hero-art .chip.p2{top:50%;right:-10%;transform:rotate(4deg);}    /* 右中 */
-  .hero-art .chip.p4{bottom:8%;right:6%;transform:rotate(-2deg);}   /* 右下 */
-  .hero-art .chip.p5{bottom:16%;left:-14%;transform:rotate(-4deg);} /* 左下 */
+  .hero-art .chip.p3{bottom:8%;right:6%;transform:rotate(-2deg);}   /* 右下 */
+  .hero-art .chip.p4{bottom:16%;left:-14%;transform:rotate(-4deg);} /* 左下 */
 
   @media(max-width:960px){
     .hero .inner{grid-template-columns:1fr;gap:60px;}
@@ -219,7 +220,7 @@
     .hero-art{display:flex;flex-direction:column;align-items:stretch;min-height:auto;padding:24px 0 40px;max-width:480px;margin:0 auto;position:relative;}
     .hero-art .ph{position:relative;top:auto;left:auto;width:100%;transform:rotate(-4deg);margin:0 0 32px;}
     .hero-art .chip{position:relative !important;top:auto !important;left:auto !important;right:auto !important;bottom:auto !important;transform:none !important;margin:4px 3px !important;font-size:12px !important;padding:8px 14px 8px 10px !important;white-space:normal !important;text-align:left !important;line-height:1.4 !important;max-width:300px;}
-    .hero-art .chip.p5{display:inline-flex !important;}
+    .hero-art .chip.p4{display:inline-flex !important;}
     .hero-art .stamp{position:absolute;top:-10px;right:-2px;width:88px;height:88px;z-index:5;}
   }
   @media(max-width:520px){
@@ -805,6 +806,11 @@
   .cd-mail-note{font-size:12.5px;color:var(--sub);margin-top:8px;line-height:1.7;}
   .cd-cta{width:100%;justify-content:center;padding:18px 28px;font-size:15px;}
   @media(max-width:760px){.cd-single{padding:32px 22px;}.cd-mail{flex-direction:column;gap:16px;}}
+
+  /* 修正4: ヒーロー sub 3段分割 */
+  .hero .sub{margin-bottom:12px;}
+  .hero .sub.sub-2,.hero .sub.sub-3{margin-top:8px;margin-bottom:0;}
+  @media(max-width:760px){.hero .sub,.hero .sub.sub-2,.hero .sub.sub-3{font-size:.95em;}}
 </style>
 </head>
 <body>
@@ -871,7 +877,9 @@
         <span class="lead-l">コーポレートサイトの刷新、</span>
         <span class="punch"><span class="pain">あきらめて</span><br>いませんか？</span>
       </h1>
-      <p class="sub">まず、御社専用のデモサイトを無料でお作りします。<span class="nb">実物を見てから、本制作を判断できます。</span>本制作はTOPページ¥250,000から、公開後はAIが下書き・人が最終確認で運用が止まりません。</p>
+      <p class="sub">まず、御社専用のデモサイトを<span class="nb">無料でお作りします。</span>実物を見てから、本制作を判断できます。</p>
+      <p class="sub sub-2">本制作は<span class="nb">TOPページ¥250,000から。</span></p>
+      <p class="sub sub-3">公開後はAIが下書き・<span class="nb">人が最終確認で、</span>運用が止まりません。</p>
       <div class="cta">
         <a class="btn btn-fill" href="#pricing">料金を試算する <span class="arr">→</span></a>
         <a class="btn btn-line" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20資料請求&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20A4%201%E6%9E%9A%E8%B3%87%E6%96%99%E3%83%BB%E8%B2%BB%E7%94%A8%E5%AF%BE%E5%8A%B9%E6%9E%9C%E3%83%A1%E3%83%A2%E3%82%92%E5%B8%8C%E6%9C%9B%E3%81%97%E3%81%BE%E3%81%99">資料を受け取る</a>
@@ -889,8 +897,8 @@
 
       <span class="chip c-dark p1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>公開後の運用が、止まったまま…</span>
       <span class="chip c-yellow p2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>安いだけの制作会社にはうんざり…</span>
-      <span class="chip c-red p4"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>お試しデザインで高額請求された…</span>
-      <span class="chip c-white p5"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>結局、誰が作ってくれるの…</span>
+      <span class="chip c-red p3"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>お試しデザインで高額請求された…</span>
+      <span class="chip c-white p4"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>結局、誰が作ってくれるの…</span>
     </div>
   </div>
 </section>
@@ -1296,7 +1304,7 @@
               <div class="nm">橋本 友太郎<span class="en">HASHIMOTO YUTARO</span></div>
               <!-- TODO: 業種×業務タグに差し替え(本人確認後) -->
               <div class="tags"><span>事業設計</span><span>経営×現場</span><span>AI活用</span></div>
-              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（橋本さん指名）&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20%E6%A9%8B%E6%9C%AC%E3%81%95%E3%82%93%E3%82%92%E6%8C%87%E5%90%8D%E3%81%97%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84">この人に相談する</a>
+              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A（橋本さん指名）&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20%E6%A9%8B%E6%9C%AC%E3%81%95%E3%82%93%E3%82%92%E6%8C%87%E5%90%8D%E3%81%97%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84">この人に相談する</a>
             </div>
           </div>
           <div class="mcard" data-idx="1">
@@ -1306,7 +1314,7 @@
               <div class="nm">櫻井 理也<span class="en">SAKURAI MICHIYA</span></div>
               <!-- TODO: 業種×業務タグに差し替え(本人確認後) -->
               <div class="tags"><span>開発</span><span>システム</span><span>実装</span></div>
-              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（櫻井さん指名）&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20%E6%AB%BB%E4%BA%95%E3%81%95%E3%82%93%E3%82%92%E6%8C%87%E5%90%8D%E3%81%97%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84">この人に相談する</a>
+              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A（櫻井さん指名）&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20%E6%AB%BB%E4%BA%95%E3%81%95%E3%82%93%E3%82%92%E6%8C%87%E5%90%8D%E3%81%97%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84">この人に相談する</a>
             </div>
           </div>
           <div class="mcard" data-idx="2">
@@ -1315,7 +1323,7 @@
               <div class="role">OneBe 代表（制作パートナー）</div>
               <div class="nm">舛谷 一成<span class="en">MASUYA ISSEI</span></div>
               <div class="tags"><span>ブランディング</span><span>Web</span><span>SNS・動画</span></div>
-              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（MASUYAさん指名）&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20MASUYA%E3%81%95%E3%82%93%E3%82%92%E6%8C%87%E5%90%8D%E3%81%97%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84">この人に相談する</a>
+              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A（MASUYAさん指名）&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20MASUYA%E3%81%95%E3%82%93%E3%82%92%E6%8C%87%E5%90%8D%E3%81%97%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84">この人に相談する</a>
             </div>
           </div>
           
@@ -1326,7 +1334,7 @@
               <div class="nm">HINANO<span class="en">HINANO</span></div>
               <!-- TODO: 業種×業務タグに差し替え(本人確認後) -->
               <div class="tags"><span>SNS</span><span>若年層訴求</span><span>トレンド感</span></div>
-              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談（HINANOさん指名）&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20HINANO%E3%81%95%E3%82%93%E3%82%92%E6%8C%87%E5%90%8D%E3%81%97%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84">この人に相談する</a>
+              <a class="nominate" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A（HINANOさん指名）&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20HINANO%E3%81%95%E3%82%93%E3%82%92%E6%8C%87%E5%90%8D%E3%81%97%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84">この人に相談する</a>
             </div>
           </div>
         </div>
@@ -1553,7 +1561,7 @@
       </div>
       <div>
         <h5>Contact</h5>
-        <a href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談">info@vaizo.jp</a>
+        <a href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A">info@vaizo.jp</a>
         <!-- LINE・お電話表記削除済(v13): メールのみに集約 -->
         <a href="https://vaizo.jp" target="_blank" rel="noopener">vaizo.jp</a>
       </div>
@@ -1569,7 +1577,7 @@
 <div class="sticky-cta">
   <a class="btn btn-line" href="#pricing"><span class="lbl">料金</span></a>
   <a class="btn btn-line" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20資料請求&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20A4%201%E6%9E%9A%E8%B3%87%E6%96%99%E3%83%BB%E8%B2%BB%E7%94%A8%E5%AF%BE%E5%8A%B9%E6%9E%9C%E3%83%A1%E3%83%A2%E3%82%92%E5%B8%8C%E6%9C%9B%E3%81%97%E3%81%BE%E3%81%99"><span class="lbl">資料</span></a>
-  <a class="btn btn-fill" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談"><span class="lbl">相談</span></a>
+  <a class="btn btn-fill" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A"><span class="lbl">相談</span></a>
 </div>
 
 <script>
