@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>中小企業のコーポレート・採用サイト制作 25万円から ｜ V/ENTER WEB（株式会社VAIZO）</title>
-<meta name="description" content="法人向けコーポレート・採用サイト制作。TOP25万円・下層5万円/ページ・月額3万円でAI同梱の運用まで担当します。実績ゼロからの初期パートナー価格。V/ENTER WEB（株式会社VAIZO）。">
+<meta name="description" content="法人向けコーポレート・採用サイト制作。TOP25万円・下層5万円/ページ・月額3万円でAI機能付きの運用までご提供いたします。実績ゼロからの初期パートナー価格。V/ENTER WEB（株式会社VAIZO）。">
 <!--
   ============================================================
   V/ENTER WEB LP - 用語ガイドライン(LP編集時の言い換えルール)
@@ -230,7 +230,7 @@
     .hero-art .chip .ic{width:18px;height:18px;}
   }
 
-  /* ===== 2. AI同梱バンド (シンプル黒〜暗茶) ===== */
+  /* ===== 2. AI機能付きバンド (シンプル黒〜暗茶) ===== */
   .ai-band{
     color:var(--paper);
     padding:104px 0;
@@ -550,6 +550,9 @@
   @media(max-width:860px){
     .why-card{grid-template-columns:1fr;gap:18px;padding:48px 24px;}
     .why-card .num-block{display:none;}
+    .why-card .pillar-jp{font-size:54px;}
+    .why-card .text-block h3{font-size:18px;line-height:1.55;}
+    .why-card .text-block p{font-size:13.5px;line-height:1.9;}
   }
 
   /* ===== Safety: 横罫線リスト(角丸ボックス廃止) ===== */
@@ -792,10 +795,24 @@
 
 
   /* 修正8: svc01 corporate 本文強調 */
-  .svc:first-child p{font-size:15.5px;line-height:2.05;}
-  .svc:first-child p b{font-weight:800;color:var(--ink);font-size:1.05em;}
+  .svc:nth-child(-n+2) p{font-size:15.5px;line-height:2.05;}
+  .svc:nth-child(-n+2) p b{font-weight:800;color:var(--ink);font-size:1.05em;}
 
   /* loader表示中のスクロール禁止は撤廃: ユーザビリティ優先で常時スクロール可能 */
+
+  /* v15: 本文の孤立文字対策 (text-wrap:pretty で最終行幅を自動最適化) */
+  .hero .sub,
+  .ai-band p,
+  .intake p, .intake .lead,
+  .why p, .why .lead,
+  .safety .item p, .safety .head-block .lead,
+  .qa .ans p, .qa .q-text,
+  .works-lead, .work-detail,
+  .honesty .opener,
+  .price-foot, .price-calc .ccaption,
+  .lead, .sub
+  { text-wrap: pretty; }
+
 
   /* 修正23: .nb クラスをタブレット以下で解除 */
   @media(max-width:860px){.nb{white-space:normal;}}
@@ -855,7 +872,7 @@
 <nav class="scrollnav" aria-label="セクションナビ">
   <a href="#services" data-sec="services"><span class="dot"></span><span class="lbl">サービス</span></a>
   <a href="#problems" data-sec="problems"><span class="dot"></span><span class="lbl">課題</span></a>
-  <a href="#intake" data-sec="intake"><span class="dot"></span><span class="lbl">打合せ</span></a>
+  <a href="#intake" data-sec="intake"><span class="dot"></span><span class="lbl">お打合せ</span></a>
   <a href="#why" data-sec="why"><span class="dot"></span><span class="lbl">強み</span></a>
   <a href="#safety" data-sec="safety"><span class="dot"></span><span class="lbl">安心の約束</span></a>
   <a href="#pricing" data-sec="pricing"><span class="dot"></span><span class="lbl">料金</span></a>
@@ -878,17 +895,16 @@
 <section class="hero">
   <div class="inner">
     <div class="copy">
-      <span class="eyebrow-h">AI同梱 / コーポレート・採用サイト制作</span>
+      <span class="eyebrow-h">AI機能付き / コーポレート・採用サイト制作</span>
       <h1>
         <span class="lead-l">コーポレートサイトの刷新、</span>
         <span class="punch"><span class="pain">あきらめて</span><br>いませんか？</span>
       </h1>
-      <p class="sub">まず、御社専用のデモサイトを<span class="nb">無料でお作りします。</span>実物を見てから、本制作を判断できます。</p>
-      <p class="sub sub-2">本制作は<span class="nb">TOPページ¥250,000から。</span></p>
-      <p class="sub sub-3">公開後はAIが下書き・<span class="nb">人が最終確認で、</span>運用が止まりません。</p>
+      <p class="sub">まず、貴社専用のデモサイトを<br class="br-mb"><span class="nb">無料でお作りします。</span><br>実物を見てから、<br class="br-mb">本制作をご判断いただけます。</p>
+      <p class="sub sub-2">本制作は<span class="nb">TOPページ250,000円から。</span><br>必要な分だけ、無駄なくお作りします。</p>
+      <p class="sub sub-3">公開後はAI機能で、<br><span class="nb">自社で無理なく運用が続けられます。</span></p>
       <div class="cta">
         <a class="btn btn-fill" href="#pricing">料金を試算する <span class="arr">→</span></a>
-        <a class="btn btn-line" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20資料請求&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20A4%201%E6%9E%9A%E8%B3%87%E6%96%99%E3%83%BB%E8%B2%BB%E7%94%A8%E5%AF%BE%E5%8A%B9%E6%9E%9C%E3%83%A1%E3%83%A2%E3%82%92%E5%B8%8C%E6%9C%9B%E3%81%97%E3%81%BE%E3%81%99">資料を受け取る</a>
         <a class="btn btn-line" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A">無料でデモサイトを依頼する</a>
       </div>
     </div>
@@ -910,20 +926,20 @@
   </div>
 </section>
 
-<!-- 2. AI同梱バンド -->
+<!-- 2. AI機能付きバンド -->
 <section class="ai-band">
   <div class="inner">
     <div class="wrap">
       <div class="label">AI EMBEDDED</div>
       <div class="body">
         <h2><span class="kk">公開</span>して、<span class="ow nb">終わらせない</span>。<br><span class="kk">後悔</span>して、<span class="ow nb">終わらせない</span>。</h2>
-        <p>Webサイトは、<span class="keyword">公開してからが本番</span>です。「公開して納品終了」の制作会社に頼むと、半年後もお知らせは去年のまま、採用ページは更新されないまま、Webサイトは古いまま放置されます。</p>
-        <p style="margin-top:22px;">私たちは違います。月3万円の保守には、<b>下の3つのAI機能から1つ</b>を同梱できます。AIが下書きを作り、最終確認は人が行います。Webサイトの更新は、止まりません。</p>
-        <p class="ai-list-label" style="margin-top:24px;font-size:13px;color:#9A928B;letter-spacing:.04em;">▼ 月¥30,000 に同梱できるAI機能（3つから1つ選択）</p>
+        <p>Webサイトは、<span class="keyword">公開してからが本番</span>です。「公開して納品終了」の制作会社に頼むと、半年後もお知らせは去年のまま、採用ページは更新されないまま、<span class="nb">Webサイトは古いまま放置されます。</span></p>
+        <p style="margin-top:22px;">私たちは違います。月額3万円の保守には、<b>下の3つのAI機能から1つ</b>をお選びいただき、ご利用いただけます。人が時間を割かなければ止まってしまう更新作業や、運用の改善にかかる<span class="nb">時間が大幅に短縮されます。</span></p>
+        <p class="ai-list-label" style="margin-top:24px;font-size:13px;color:#9A928B;letter-spacing:.04em;">▼ 月額3万円でご利用いただけるAI機能（3つから1つ選択）</p>
       <div class="ai-list">
-          <div><b>お知らせの下書き</b><span>更新ネタからAIが文章案を作成。担当者は内容を確認して公開できます。</span></div>
-          <div><b>問合せ返信の下書き</b><span>よくある質問と過去の対応をAIが参照して返信案を用意。送信前に人が確認します。</span></div>
-          <div><b>検索広告の改善案</b><span>検索キーワード・予算・広告文の改善案をAIが提示。承認した内容のみ実際に反映します。</span></div>
+          <div><b>お知らせの下書き</b><span>更新ネタからAIが文章案を作成いたします。ご担当者様は内容を確認し、公開するだけ。毎週、<br>ニュース等を検索し、AIが自らネタを提案する体制も構築できます。</span></div>
+          <div><b>問合せ返信の下書き</b><span>よくある質問や、過去の対応をAIに覚えさせる事で、返信案を人が考える必要がなくなります。</span></div>
+          <div><b>検索広告の改善案</b><span>広告運用の実績分析・リアルタイムのキーワード入札単価をAIが収集。広告運用の改善に必要な、キーワード選定・入札単価・成約管理等の作業を省力化できます。</span></div>
         </div>
       </div>
     </div>
@@ -935,7 +951,7 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Services</div>
-      <h2 class="h-md">コーポレートサイト・採用サイト・AI運用の3本立てで、<br class="br-pc">会社のWebを<span class="o">支えます</span>。</h2>
+      <h2 class="h-md">コーポレートサイト・採用サイト・<br>AI運用の3本立てで、<br>会社のWebを<span class="o">支えます</span>。</h2>
     </div>
     <div class="svc-row reveal-group">
       <div class="svc">
@@ -949,15 +965,15 @@
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <div class="n">02 ／ Recruit</div>
         <h3>採用サイト<br>制作</h3>
-        <p><b>採用サイトがあると、応募者の質が変わります。</b>求人媒体では伝わらない、日常の働き方・社員の人柄・職場の空気を写真とテキストで見せると、「この会社で働きたい」と思って応募する人が集まり、入社後のミスマッチが減ります。応募者からの問合せはAIが返信案を用意します。</p>
+        <p><b>採用サイトがあると、応募者の質が変わります。</b>新卒3年以内の離職率は約3割（高卒は約4割）、人事担当者の8割超が「採用後のミスマッチを感じた」と回答しています。求人媒体では伝わらない日常の働き方・社員の人柄・職場の空気を、写真と本人の言葉で見せることで、自社を深く理解した応募者だけが集まり、「思っていたのと違う」を入社前に防げます。</p>
         <div class="price"><b>25万円〜</b><span>INITIAL</span></div>
       </div>
       <div class="svc featured">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg></div>
         <div class="n">03 ／ AI Ops</div>
-        <h3>AI機能を1つ選んで、<br>月3万円で運用。</h3>
-        <p>用意した<b>3つのAI機能（お知らせ自動生成・問合せ返信・検索広告改善）から、御社が使う1つを選択</b>。月3万円ぽっきりで運用までお引き受けします。社内の人手が限られていても、サイトの更新は止まりません。</p>
-        <div class="price"><b>月3万円</b><span>MONTHLY</span></div>
+        <h3>AI機能で、自社運用を<br>月額3万円から省力化。</h3>
+        <p><b>3つのAI機能（お知らせ自動生成・問合せ返信・検索広告改善）から、貴社が使う1つを選択</b>。AIが下書き・分析・改善案の業務を担うので、外注さんを増やさなくても自社内で運用ができるようになります。Webサイト担当者を新たに採用しなくても、サイトが適切に運営される体制を、月額3万円から実装します。</p>
+        <div class="price"><b>月額3万円</b><span>MONTHLY</span></div>
       </div>
     </div>
   </div>
@@ -968,7 +984,7 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Common pain</div>
-      <h2 class="h-md">こんな状態、<br class="br-pc"><span class="o nb">あきらめていませんか。</span></h2>
+      <h2 class="h-md">こんな状態、<br><span class="o nb">あきらめていませんか。</span></h2>
     </div>
     <p class="sub-note reveal">想定されるご相談例</p>
     <div class="prob-cloud">
@@ -980,7 +996,7 @@
       <div class="prob p2 reveal r-tilt">
         <div class="avatar"><div class="av">B</div><div class="meta"><span class="role">サービス業 / 役員</span><span class="who">B社</span></div><span class="case-label">典型例</span></div>
         <h4>リニューアル見積もりが200万円で、諦めた。</h4>
-        <p>トライアル30万＋本実装170万。稟議も通せず、その日に諦めた。</p>
+        <p>トライアル30万＋本実装170万。<span class="nb">稟議も通せず、</span>その日に諦めた。</p>
       </div>
       <div class="prob p3 reveal r-tilt">
         <div class="avatar"><div class="av">C</div><div class="meta"><span class="role">飲食 / オーナー</span><span class="who">C店</span></div><span class="case-label">典型例</span></div>
@@ -1012,28 +1028,28 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">How we start</div>
-      <h2>打合せは、<span class="o">デモサイト</span>から<br class="br-pc">始めます。</h2>
+      <h2>お打合せは、<br><span class="o">デモサイト</span>から始めます。</h2>
     </div>
     <div class="intake-steps">
       <div class="istep reveal">
         <div class="inum">i.</div>
         <div class="ibody">
-          <h4>御社の業種・採用要件をヒアリング</h4>
-          <p>15〜30分のオンライン MTG で、事業内容・採用したい人物像・既存サイトの課題を伺います。事前資料のご準備は不要です。</p>
+          <h4>貴社の業種・採用要件をヒアリング</h4>
+          <p>30分から1時間程度のオンライン MTG で、事業内容・採用したい人物像・<span class="nb">既存サイトの課題を伺います。</span><span class="nb">事前資料のご準備は不要です。</span></p>
         </div>
       </div>
       <div class="istep reveal">
         <div class="inum">ii.</div>
         <div class="ibody">
-          <h4>御社専用のデモサイトを制作 <span class="free">制作費 ０円</span></h4>
-          <p>ヒアリング内容をもとに、御社専用のデモサイトを当社負担で制作します。実際のレイアウト・トーン・写真の入り方まで、本物と同じ環境でご確認いただけます。<br><span class="note-add">他社様が作成したデザインデータをご支給いただける場合は、そちらの再現も可能です。</span></p>
+          <h4>貴社専用のデモサイトを制作 <span class="free">制作費 ０円</span></h4>
+          <p>ヒアリング内容をもとに、貴社専用のデモサイトを当社負担で制作します。実際のレイアウト・トーン・<span class="nb">写真の入り方</span>まで、本物と同じ環境でご確認いただけます。<br><span class="note-add">他社様が作成したデザインデータをご支給いただける場合は、そちらの再現も可能です。</span></p>
         </div>
       </div>
       <div class="istep reveal">
         <div class="inum">iii.</div>
         <div class="ibody">
-          <h4>実物を見ながら打合せ → 構成・料金確定</h4>
-          <p>デモサイトを画面共有しながら、ページ構成・原稿方針・公開後の運用方法を一緒に詰めていきます。料金はその場で確定、見積書を即日お渡しします。</p>
+          <h4>実物を見ながらお打合せ → 構成・料金確定</h4>
+          <p>デモサイトを画面共有しながら、ページ構成・原稿方針・公開後の運用方法を一緒に詰めていきます。<span class="nb">料金はその場で確定、見積書を即日お渡しします。</span></p>
         </div>
       </div>
     </div>
@@ -1046,9 +1062,9 @@
     <div class="reveal">
       <div class="eyeb">Our stance</div>
       <h2 class="punch">
-        Web制作の値段は、ほとんどが<span class="ul">人件費</span><span class="nb">です。</span><br class="br-pc">
-        私たちは、人がやらなくていい作業を<span class="ser">AI</span>に<span class="nb">任せます。</span><br class="br-pc">
-        そして、人にしかできない<span class="nb">ことに、</span><br class="br-pc">
+        Web制作の値段は、ほとんどが<span class="ul">人件費</span><span class="nb">です。</span><br>
+        私たちは、人がやらなくていい<br class="br-mb">シゴトを<span class="ser">AI</span>に<span class="nb">任せます。</span><br>
+        そして、人にしかできない<span class="nb">ことに、</span><br>
         すべてのリソースを<span class="nb">向けます。</span>
       </h2>
       <!-- stance-note 削除済(v13): 実態と乖離するため -->
@@ -1060,8 +1076,8 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Why V/ENTER WEB</div>
-      <h2 class="h-md">安い・早い・<span class="nb">きれい。</span><br class="br-pc">普通はどれか1つを諦め<span class="nb">ますが、</span><br class="br-pc">AIで人の手間を減らせ<span class="nb">るぶん、</span><br class="br-pc"><span class="o">3つすべて</span>を実現<span class="nb">します。</span></h2>
-      <p class="lead" style="margin-top:22px;">AIに任せられる作業を増やすぶん、人の工数を減らし、その分をデザインの密度と納期の短縮に使います。</p>
+      <h2 class="h-md">安い・早い・<span class="nb">きれい。</span><br>普通はどれか1つを諦め<span class="nb">ますが、</span><br>AIで人の手間を減らせ<span class="nb">るぶん、</span><br><span class="o">3つすべて</span>を実現<span class="nb">します。</span></h2>
+      <p class="lead" style="margin-top:22px;">AIに任せられるシゴトが増える分、人にしかできない<b>デザインのクオリティ</b>と<b><span class="nb">成果が出る</span>サイトづくりの工夫</b>に、時間を集中投下いたします。</p>
     </div>
   </div>
   <div class="why-strip">
@@ -1072,7 +1088,7 @@
       </div>
       <div class="text-block">
         <h3>TOP一式 ¥250,000 から。</h3>
-        <p>人件費の積み上げではなく、AIで工程数そのものを減らすので、決裁が通る金額に収まります。見積もりは初回相談で即お出しします。</p>
+        <p>AIで人がやらなくていいシゴトを無くしているため、<span class="nb">リーズナブルな価格</span>で<span class="nb">ご提案いたします。</span></p>
       </div>
       <div class="num-block">01</div>
     </div>
@@ -1083,7 +1099,7 @@
       </div>
       <div class="text-block">
         <h3>構成決定後、すぐに制作に取りかかります。</h3>
-        <p>事前にページ構成のパターンを用意しており、AIが最初の原稿も作成します。構成決定後、2〜4週間で公開できます。</p>
+        <p>業界経験豊富なプランナーがAIを操作するため、<span class="nb">クオリティを維持しながら、</span><span class="nb">構成決定までの時間を圧縮しております。</span>構成決定後4週間で<span class="nb">サイト公開まで進められます。</span></p>
       </div>
       <div class="num-block">02</div>
     </div>
@@ -1094,7 +1110,7 @@
       </div>
       <div class="text-block">
         <h3>デザイナーは、自分で指名できます。</h3>
-        <p>4名のディレクター/デザイナーから選択。<b>実物のデモサイトを見てから判断できます</b>。着手前にデザイン案を複数提示、選んでから本制作へ。追加費用なし。</p>
+        <p>在籍するディレクター／デザイナーから選択。<b>実物のデモサイトを見てから判断できます</b>。着手前にデザイン案を複数提示、選んでから本制作へ。追加費用なし。</p>
       </div>
       <div class="num-block">03</div>
     </div>
@@ -1127,8 +1143,8 @@
           <div class="a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         </div>
         <div>
-          <h4>最低契約6ヶ月の理由は、AI運用にあります。</h4>
-          <p>3ヶ月でAIが貴社の文体や顧客対応を学び、6ヶ月で実際の効果が見え始めます。期間後はいつでも解約可、違約金なし。</p>
+          <h4>最低保守運用期間が6カ月の理由は、</h4>
+          <p>3か月でAIが貴社の文体や顧客対応を学ぶセットアップを行い、少なくとも6カ月で実際の効果を実現いたします。期間後はいつでも解約可能で、違約金も一切ございません。</p>
         </div>
       </div>
       <div class="item reveal">
@@ -1166,27 +1182,27 @@
     <div class="price-card reveal">
       <div class="price-row">
         <div class="pname">TOPページ制作</div>
-        <div class="pdesc">ページ構成・デザイン・スマホ表示・Google検索対策・お問合せフォームまで、すべて含まれます。</div>
+        <div class="pdesc">ページ構成・デザイン・スマホ表示・Google検索対策・お問合せフォームまで、<span class="nb">すべて含まれます。</span></div>
         <div class="pval">¥250,000<span class="u">固定</span></div>
       </div>
       <div class="price-row">
         <div class="pname">下層ページ追加</div>
-        <div class="pdesc">会社概要・サービス・事業内容・採用・お知らせ等。必要なページ数だけ1ページ単位で追加。</div>
+        <div class="pdesc">会社概要・サービス・事業内容・採用・お知らせ等。必要なページ数だけ<span class="nb">1ページ単位で追加。</span></div>
         <div class="pval">¥50,000<span class="u">／ページ</span></div>
       </div>
       <div class="price-row">
         <div class="pname">保守・AI運用</div>
-        <div class="pdesc">サーバ／更新管理に加え、お知らせ・問合せ返信・検索広告の3つから<b>1つ</b>をAI同梱（2つ目以降は別途）。月額固定。</div>
+        <div class="pdesc">サーバー管理・サイトの軽微修正に加え、3つのAI機能（お知らせ・問合せ返信・<span class="nb">検索広告</span>）から<b>1つ</b>を月額料金内でご利用いただけます（2つ目以降は別途お見積り）。<span class="nb">月額固定。</span></div>
         <div class="pval">¥30,000<span class="u">／月</span></div>
       </div>
       <div class="price-row">
         <div class="pname">写真・動画の撮影／編集</div>
-        <div class="pdesc">サイト掲載用の写真・動画の撮影や編集が必要な場合は、案件に応じて別途お見積りいたします。</div>
+        <div class="pdesc">サイト掲載用の写真・動画の撮影や編集が必要な場合は、案件に応じて<span class="nb">別途お見積りいたします。</span></div>
         <div class="pval">別途<span class="u">お見積り</span></div>
       </div>
       <div class="price-row">
-        <div class="pname">最低契約期間</div>
-        <div class="pdesc">公開後の最低保守期間。期間後はいつでも解約可能(費用変動なし)。</div>
+        <div class="pname">最低保守運用期間</div>
+        <div class="pdesc">公開後の最低保守運用期間。期間後はいつでも解約可能（費用変動なし）。</div>
         <div class="pval">6<span class="u">ヶ月</span></div>
       </div>
     </div>
@@ -1195,8 +1211,8 @@
     <div class="price-calc reveal r-scale">
       <div class="calc-inner">
         <div>
-          <h3>下層ページ数で、見積もりを試算。</h3>
-          <p class="ccaption">バーを動かすと、TOP+下層構成の初期費用を即計算。月額保守 ¥30,000 は別途、構成によらず一律です。</p>
+          <h3>下層ページ数で、<span class="nb">見積もりを試算。</span></h3>
+          <p class="ccaption">バーを動かすと、TOP+下層構成の初期費用を即計算。<span class="nb">月額保守 3万円は別途、</span><span class="nb">構成によらず一律です。</span></p>
           <p class="slider-note" style="font-size:12px;color:#9A928B;margin-bottom:10px;line-height:1.7;">※ 下層ページ＝TOP以外のページ（会社概要・サービス・お知らせ等）</p>
           <div class="slider-row">
             <div class="slider-label"><span>下層ページ数</span><b><span id="pcPages">3</span> ページ</b></div>
@@ -1206,7 +1222,7 @@
         <div class="result">
           <div class="result-label">初期費用</div>
           <div class="result-init"><span class="yen">¥</span><span id="pcInit">400,000</span></div>
-          <div class="result-mo"><span class="lbl">月額保守(AI運用同梱)</span><span class="val">¥30,000</span></div>
+          <div class="result-mo"><span class="lbl">月額保守（AI運用込み）</span><span class="val">¥30,000</span></div>
           <p class="breakdown">内訳: TOP ¥250,000 + 下層 ¥50,000 × <span id="pcQty">3</span>ページ = <span id="pcInit2">¥400,000</span></p>
         </div>
       </div>
@@ -1215,7 +1231,7 @@
     <!-- 初期費用イメージ(保守は別表示) -->
     <div class="price-examples reveal">
       <h3>初期費用イメージ</h3>
-      <p class="ex-desc">下層ページ数で初期費用が決まります。下記は<b>初期だけ</b>の目安。月額保守 ¥30,000 は別途、構成によらず一律です。</p>
+      <p class="ex-desc">下層ページ数で初期費用が決まります。下記は<b>初期だけ</b>の目安。<span class="nb">月額保守 3万円は別途、</span><span class="nb">構成によらず一律です。</span></p>
       <div class="ex-table">
         <div class="ex-row ex-head">
           <span>構成</span>
@@ -1242,7 +1258,7 @@
           <span class="ex-total"><b>¥550,000</b></span>
         </div>
       </div>
-      <p class="price-foot"><b>+ 月額 ¥30,000</b> で、サーバ管理・更新・AI運用(お知らせ・問合せ・検索広告の下書き＋人の最終確認)が同梱。<br><b>大規模・複合案件</b>(多言語、会員機能、IR・採用統合、7ページ以上等)は別途お見積り。</p>
+      <p class="price-foot"><b>+ 月額3万円</b> で、サーバー管理・サイトの軽微修正・AIツールセットアップサービスを行います。<br>多言語対応・会員機能等の特殊な開発、写真素材・動画素材の撮影と編集についても、随時お見積りを承ります。</p>
     </div>
 
     <!-- 業種別 料金早見表 -->
@@ -1298,7 +1314,7 @@
     <div class="head-en reveal r-left">
       <div class="eyeb">Members</div>
       <h2>結局は、<span class="o">人</span>で選びますよね。</h2>
-      <p class="hint">この事業に関わる4名です。業種や課題が近いディレクターを、あなたから指名できます。</p>
+      <p class="hint">この事業に関わるディレクター／デザイナーをご紹介します。業種や課題が近い担当者を、あなたから指名できます。</p>
     </div>
 
     <div class="mslider" id="memberSlider">
@@ -1363,8 +1379,8 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Works</div>
-      <h2 class="h-md">公開できる実績は、<br class="br-pc">まだ<span class="o">3件</span>です。</h2>
-      <p class="works-lead">少ない件数ですが、それぞれに当社の制作思想とAI同梱運用がどう機能したかを、隠さず書きます。</p>
+      <h2 class="h-md">公開できる実績は、<br>まだ<span class="o">3件</span>です。</h2>
+      <p class="works-lead">少ない件数ですが、それぞれに当社の制作思想とAI機能込みの運用がどう機能したかを、隠さず書きます。</p>
     </div>
     <div class="works-grid reveal-group">
 
@@ -1452,7 +1468,7 @@
             <span class="pdet">公開前のキャンセル、契約後の担当変更、六ヶ月後の解約。すべて違約金なしで対応します。</span>
           </div>
         </div>
-        <div class="aside">そして、御社専用に作るデモサイトの制作費は、当社負担。「話を聞いた」で終わらず、必ず実物の提案物をお渡しします。</div>
+        <div class="aside">そして、貴社専用に作るデモサイトの制作費は、当社負担。「話を聞いた」で終わらず、必ず実物の提案物をお渡しします。</div>
         <div class="close">実績が無い時期だからこそ、他社より時間をかけて、<span class="o">最初のお客様として取り組みます</span>。</div>
         <div class="sign">
           <span class="date">二〇二六年 五月</span>
@@ -1473,31 +1489,31 @@
     </div>
     <div class="faq-wrap reveal">
 
-      <div class="qa"><q><span class="q-text">本当に25万円から、コーポレートサイトが作れますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。¥250,000はTOPページ1枚の固定価格です。下層ページは1ページ¥50,000で追加。例: TOP+下層3ページ=¥400,000、TOP+下層6ページ=¥550,000。価格を抑えられるのは、AIで工程数そのものを減らしているからです。</p></div></div>
+      <div class="qa"><q><span class="q-text">本当に25万円から、コーポレートサイトが作れますか？</span><span class="tgl"></span></q><div class="ans"><p>はい、ご制作いただけます。TOPページ¥250,000は固定価格です。下層ページが必要な場合は、1ページあたり¥50,000で必要な分だけご注文いただけます。たとえば、TOP＋下層3ページの場合は¥400,000、TOP＋下層6ページの場合は¥550,000です。</p></div></div>
 
-      <div class="qa"><q><span class="q-text">「デモサイトの制作費は無料」と書かれていますが、本当に費用は発生しませんか？</span><span class="tgl"></span></q><div class="ans"><p>はい。初回ヒアリングと、御社専用のデモサイト制作は、すべて当社負担です。デモサイトを見たうえで「やはり見送り」となっても、費用は一切いただきません。「話を聞いて終わり」にせず、必ず実物の提案物をお渡しするための仕組みです。</p></div></div>
+      <div class="qa"><q><span class="q-text">「デモサイトの制作費は無料」と書かれていますが、本当に費用は発生しませんか？</span><span class="tgl"></span></q><div class="ans"><p>はい。初回ヒアリングおよび、貴社専用のデモサイト制作は、すべて当社負担で承ります。デモサイトをご覧いただいた上で「ご見送り」となられた場合も、費用は一切いただきません。「お話を伺うだけ」で終わらせず、必ず、実物のデモサイトをご覧いただけます。</p></div></div>
 
-      <div class="qa"><q><span class="q-text">保守の月3万円には、何が含まれますか？</span><span class="tgl"></span></q><div class="ans"><p>サーバ・更新管理に加え、<b>3つのAI機能から1つ</b>を選んで同梱できます(お知らせ下書き／問合せ返信下書き／検索広告改善案)。送信・公開前は必ず人が最終確認します。月¥30,000、TOP+下層6ページまでの構成が前提です。それ以上の構成は別途お見積り。</p></div></div>
+      <div class="qa"><q><span class="q-text">保守の月額3万円には、何が含まれますか？</span><span class="tgl"></span></q><div class="ans"><p>サーバー管理・サイトの軽微修正に加え、3つのAI機能（お知らせ下書き／問合せ返信下書き／検索広告改善案）から<b>1つ</b>をお選びいただき、月額料金内でご利用いただけます。</p></div></div>
 
-      <div class="qa"><q><span class="q-text">AI機能を2つ以上使いたい場合は、どうなりますか？</span><span class="tgl"></span></q><div class="ans"><p>月¥30,000に同梱できるAI機能は1つです。2つ目以降のAI機能は、追加料金(要相談)でご利用いただけます。最初は1つで始めて、運用が回り出してから2つ目を追加する方が多いです。</p></div></div>
+      <div class="qa"><q><span class="q-text">AI機能を2つ以上使いたい場合は、どうなりますか？</span><span class="tgl"></span></q><div class="ans"><p>月額3万円に含まれるAI機能は1つです。<b>2つ以上のAI機能をご希望の場合は、月額5万円で3つの機能すべてを使い放題</b>でご利用いただけます。最初は1つから始められ、運用が回り出してから他の機能を追加されるお客様も多くいらっしゃいます。</p></div></div>
 
-      <div class="qa"><q><span class="q-text">大手の制作会社に依頼するのと、何が違いますか？</span><span class="tgl"></span></q><div class="ans"><p>大手は分業前提で、ディレクション/デザイン/コーディング/運用が別担当。その人件費の積み上げが見積もりに乗ります。私たちは、人がやらなくていい作業はAIに置き換え、人にしかできないことにリソースを集中させます。結果として、初期費用も運用費用も大きく抑えられます。</p></div></div>
+      <div class="qa"><q><span class="q-text">大手の制作会社に依頼するのと、何が違いますか？</span><span class="tgl"></span></q><div class="ans"><p>大手は分業前提のため、ディレクション／デザイン／コーディング／運用が別担当となり、人件費の積み上げがお見積りに反映されてしまう事例が、多い傾向があります。当社では、人がやらなくていいシゴトはAIに置き換え、人にしかできない領域にリソースを集中させております。結果として、初期費用も運用費用も大きく抑えることが可能です。</p></div></div>
 
-      <div class="qa"><q><span class="q-text">採用サイトと、コーポレートサイトを同時に依頼できますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。①1サイトに統合: TOP+下層7ページで <b>¥600,000</b> が目安。運用も一本化できます。②2サイト別立て: コーポ・採用それぞれで初期費用が発生。どちらが適切かは、初回ヒアリングで判断します。</p></div></div>
+      <div class="qa"><q><span class="q-text">採用サイトと、コーポレートサイトを同時に依頼できますか？</span><span class="tgl"></span></q><div class="ans"><p>はい、可能です。①1サイトに統合される場合：採用要素を含めた構成・必要なページ数をご相談の上、お見積りいたします。運用も一本化いただけます。②2サイト別立ての場合：盛り込みたい情報量によっては、コーポレート・採用それぞれにTOPページ構築費用が発生いたします。どちらが適切かは、初回ヒアリングにてご一緒に判断させてください。</p></div></div>
 
-      <div class="qa"><q><span class="q-text">既存サイトのリニューアルも対応していますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。「制作会社に依頼したまま止まっている」「CMSが古くて触れない」状態のリニューアルに対応します。必要なページだけ作り直しか全面か、構成と金額をご提案します。料金は新規と同じ(TOP ¥250,000 + 下層 ¥50,000/ページ)。</p></div></div>
+      <div class="qa"><q><span class="q-text">既存サイトのリニューアルも対応していますか？</span><span class="tgl"></span></q><div class="ans"><p>はい、対応いたします。「制作会社にご依頼後、止まったままになっている」「CMSが古く触れない」状態のリニューアルにも対応いたします。必要なページだけのお作り直しか全面リニューアルか、構成と金額をご提案いたします。料金は新規制作と同じ構造（TOPページ ¥250,000 ＋ 下層ページ ¥50,000/ページ）です。なお、下層ページ1ページのみのリニューアルをご希望の場合でも、サイト土台の構築・調整費用としてTOPページ分が発生いたしますので、あらかじめご了承ください。</p></div></div>
 
-      <div class="qa"><q><span class="q-text">デザイナーやディレクターは指名できますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。<b>4名</b>のディレクター/デザイナーから、初回ヒアリングの際にご指名いただけます。契約後でも変更可能、指名し直しの追加費用はかかりません。「人」で選べる体制です。</p></div></div>
+      <div class="qa"><q><span class="q-text">デザイナーやディレクターは指名できますか？</span><span class="tgl"></span></q><div class="ans"><p>はい、ご指名いただけます。<b>メンバーセクションに掲載しているディレクター／デザイナー</b>の中から、初回ヒアリングの際にお選びいただけます。ご契約後の変更も可能で、指名し直しによる追加費用はいただきません。「人」でお選びいただける体制です。</p></div></div>
 
-      <div class="qa"><q><span class="q-text">契約後、合わなければやめられますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。公開前のキャンセル(作業実費のみ)、契約後の担当変更、6ヶ月後の解約。すべて違約金なしで対応します。最低契約6ヶ月の理由は、AI運用が3ヶ月で学習データが溜まり、6ヶ月で実際の効果が見え始めるためです。期間後はいつでも解約可能です。</p></div></div>
+      <div class="qa"><q><span class="q-text">契約後、合わなければやめられますか？</span><span class="tgl"></span></q><div class="ans"><p>はい、可能です。公開前のキャンセル（作業実費のみご請求）、ご契約後の担当変更、保守運用期間が6カ月経過後の解約──いずれも違約金なしで承ります。最低保守運用期間を6カ月としているのは、AI運用が3か月で学習データが蓄積され、6カ月で実際の効果が見え始めるためです。期間経過後は、いつでも解約いただけます。</p></div></div>
 
-      <div class="qa"><q><span class="q-text">公開後、サイトに不具合が出たらどうなりますか？</span><span class="tgl"></span></q><div class="ans"><p>月3万円の保守の中で、表示崩れ・サーバ障害・主要機能の不具合は無償で修正対応します。修正範囲はご契約時に明文化したものをお渡しします。「直したら追加見積もり」のような後出しは行いません。</p></div></div>
+      <div class="qa"><q><span class="q-text">公開後、サイトに不具合が出たらどうなりますか？</span><span class="tgl"></span></q><div class="ans"><p>月額保守の範囲内で、軽微な表示崩れや、当社実装範囲内での不具合については修正対応いたします。大規模な改修・仕様変更、外部サーバー要因による障害は、別途お見積りいたします。</p></div></div>
 
-      <div class="qa"><q><span class="q-text">制作実績はどれくらいありますか？</span><span class="tgl"></span></q><div class="ans"><p>現在、公開できる制作実績は<b>3件</b>です(実績セクションをご覧ください)。少ない件数だからこそ、各案件に十分な時間を割けるのが現時点の特徴です。御社専用のデモサイトを初回ヒアリング後にお渡しするので、デモ＋実績の両方で制作水準をご判断いただけます。</p></div></div>
+      <div class="qa"><q><span class="q-text">制作実績はどれくらいありますか？</span><span class="tgl"></span></q><div class="ans"><p>現在、公開できる制作実績はあまり多くはありません（実績セクションをご覧ください）。だからこそ、各案件に十分な時間を割けるのが、現時点の特徴と考えております。貴社専用のデモサイトを初回ヒアリング後にお渡しいたしますので、デモと実績の両方で制作水準をご確認いただけます。</p></div></div>
 
-      <div class="qa"><q><span class="q-text">遠方の会社でも、依頼できますか？</span><span class="tgl"></span></q><div class="ans"><p>はい。やりとりはオンラインで完結しますので、地域を問わずご依頼いただけます。まずはメールでお気軽にお問い合わせください。</p></div></div>
+      <div class="qa"><q><span class="q-text">遠方の会社でも、依頼できますか？</span><span class="tgl"></span></q><div class="ans"><p>はい、ご依頼いただけます。やりとりはオンラインで完結いたしますので、地域を問わずご相談を承ります。まずはメールにてお気軽にお問い合わせください。</p></div></div>
 
-      <div class="qa"><q><span class="q-text">株式会社VAIZOは、どんな会社ですか？</span><span class="tgl"></span></q><div class="ans"><p>2026年設立、AIの実装と運用を本業とする会社です。V/ENTER WEBはその中で「中小企業のWeb領域に、AIで作った余白を直接届ける」事業として立ち上げました。事業全体の方針は <a href="https://vaizo.jp" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:underline;">vaizo.jp</a> に記載しています。</p></div></div>
+      <div class="qa"><q><span class="q-text">株式会社VAIZOは、どんな会社ですか？</span><span class="tgl"></span></q><div class="ans"><p>2026年設立、AIの実装と運用を本業とする会社です。V/ENTER WEBはその中で、AIを活用して「人がやらなくていいシゴト」を無くし、中小企業のWeb制作・運用を、適正価格と高品質で両立させる事業として立ち上げました。事業全体の方針は <a href="https://vaizo.jp" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:underline;">vaizo.jp</a> に掲載しております。</p></div></div>
 
     </div>
   </div>
@@ -1518,7 +1534,6 @@
       <p>「うちの場合いくら？」だけでも答えます。初回ヒアリング30分、無料。売り込みはしません。</p>
       <div class="cta">
         <a class="btn btn-fill" href="#pricing">料金を試算する <span class="arr">→</span></a>
-        <a class="btn btn-line" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20資料請求&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20A4%201%E6%9E%9A%E8%B3%87%E6%96%99%E3%83%BB%E8%B2%BB%E7%94%A8%E5%AF%BE%E5%8A%B9%E6%9E%9C%E3%83%A1%E3%83%A2%E3%82%92%E5%B8%8C%E6%9C%9B%E3%81%97%E3%81%BE%E3%81%99">資料を受け取る</a>
         <a class="btn btn-line" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A">無料でデモサイトを依頼する</a>
       </div>
       <p class="micro">お問い合わせ：info@vaizo.jp ／ 株式会社VAIZO</p>
@@ -1531,8 +1546,8 @@
   <div class="inner">
     <div class="head reveal">
       <div class="h-eye">Contact</div>
-      <h2 class="h-md">お問い合わせは、<br class="br-pc"><span class="o">メール一通</span>から。</h2>
-      <p class="lead" style="margin-top:18px;">会社名・担当者名・電話番号・お問合せ内容をご記入のうえ、下記のメールアドレスまでご送信ください。営業日内に必ずご返信いたします。</p>
+      <h2 class="h-md">お問い合わせは、<br><span class="o">メール一通</span>から。</h2>
+      <p class="lead" style="margin-top:18px;">会社名・担当者名・<br class="br-mb">電話番号・お問合せ内容を<br class="br-mb">ご記入のうえ、<br>下記のメールアドレスまで<br class="br-mb">ご送信ください。<br class="br-mb">2営業日以内にご返信します。</p>
     </div>
     <div class="cd-single reveal">
       <div class="cd-mail">
@@ -1554,12 +1569,12 @@
     <div class="ft-grid">
       <div>
         <div class="logo">V/ENTER <span style="color:var(--orange)">WEB</span></div>
-        <p>法人向けコーポレートサイト・採用サイトの制作と、公開後のAI運用同梱。TOP25万円・下層5万円/ページ・月3万円の保守の中で、AIが下書きを作り、人が最終確認します。<br>株式会社VAIZOのWeb制作事業です。</p>
+        <p>法人向けコーポレートサイト・採用サイトの制作と、<span class="nb">公開後のAI機能込みの運用</span>までを担う事業です。TOPページ¥250,000・下層ページ¥50,000/ページ・月額3万円で、人がやらなくていいシゴトをAIに任せ、お客様のWeb運用を省力化いたします。<br>株式会社VAIZOは「<span class="nb">生存のためのシゴトから人類を解放し、</span><span class="nb">みんながスキに没頭できる世界をつくる</span>」をミッションに、AIの実装と運用を本業とする会社です。</p>
       </div>
       <div>
         <h5>Menu</h5>
         <a href="#services">サービス</a>
-        <a href="#intake">打合せの始め方</a>
+        <a href="#intake">お打合せの始め方</a>
         <a href="#why">強み</a>
         <a href="#safety">安心の約束</a>
         <a href="#pricing">料金</a>
@@ -1583,7 +1598,6 @@
 <!-- モバイル追従CTA(3ボタン: 料金/資料/相談) ※LINE・電話は #contact-detail で常設 -->
 <div class="sticky-cta">
   <a class="btn btn-line" href="#pricing"><span class="lbl">料金</span></a>
-  <a class="btn btn-line" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20資料請求&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A%0D%0A%0D%0A%E2%80%BB%20A4%201%E6%9E%9A%E8%B3%87%E6%96%99%E3%83%BB%E8%B2%BB%E7%94%A8%E5%AF%BE%E5%8A%B9%E6%9E%9C%E3%83%A1%E3%83%A2%E3%82%92%E5%B8%8C%E6%9C%9B%E3%81%97%E3%81%BE%E3%81%99"><span class="lbl">資料</span></a>
   <a class="btn btn-fill" href="mailto:info@vaizo.jp?subject=V/ENTER%20WEB%20相談&body=V%2FENTER%20WEB%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AB%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%3A%0D%0A%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%3A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%3A%0D%0A%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B%E5%86%85%E5%AE%B9%3A"><span class="lbl">相談</span></a>
 </div>
 
