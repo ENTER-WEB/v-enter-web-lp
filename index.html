@@ -134,6 +134,7 @@
   .reveal.r-pop{transform:scale(.75) translateY(20px);transition:opacity .6s cubic-bezier(.34,1.56,.64,1),transform .6s cubic-bezier(.34,1.56,.64,1);}
   .reveal.r-fade{transform:none;}
   .reveal.r-tilt{transform:translateY(20px) rotate(-3deg);transition:opacity .8s cubic-bezier(.34,1.56,.64,1),transform .8s cubic-bezier(.34,1.56,.64,1);}
+  .reveal.r-left.is-in,.reveal.r-right.is-in,.reveal.r-scale.is-in,.reveal.r-pop.is-in,.reveal.r-fade.is-in{transform:none;}
   .reveal.r-tilt.is-in{transform:rotate(var(--tilt,0deg));}
   /* delay クラス(stagger用) */
   .d-1{transition-delay:.08s;} .d-2{transition-delay:.16s;} .d-3{transition-delay:.24s;}
@@ -220,6 +221,10 @@
   .hero-art .chip.p3{bottom:8%;right:6%;transform:rotate(-2deg);}   /* 右下 */
   .hero-art .chip.p4{bottom:16%;left:-14%;transform:rotate(-4deg);} /* 左下 */
 
+  @media(min-width:961px) and (max-width:1180px){
+    .hero .inner{gap:40px;}
+    .hero-art .chip.p2{right:-2%;}
+  }
   @media(max-width:960px){
     .hero .inner{grid-template-columns:1fr;gap:60px;}
     .hero{text-align:center;}
@@ -483,6 +488,10 @@
     .mcard{flex:0 0 calc((100% - 16px));}
     .mslider .track{gap:16px;}
     .team .head-en h2{font-size:48px;}
+  }
+  @media(max-width:520px){
+    .team .head-en{padding-left:0;}
+    .team .head-en h2{font-size:clamp(38px,12.5vw,44px);}
   }
   @media(min-width:861px) and (max-width:1180px){
     .mcard{flex:0 0 calc((100% - 32px) / 2);}
